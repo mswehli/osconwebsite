@@ -1,0 +1,90 @@
+/* Different components that can be reused through sites directly */
+select,
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="button"],
+input[type="submit"]
+{
+    border: 1px solid $color_accent_dark;
+    height:$unit;
+    border-radius:0;
+    padding:0 $spacing;
+}
+
+textarea{
+    border: 1px solid $color_accent_dark;
+}
+
+input-section
+{
+    max-width:100%;
+    
+    border-bottom: 1px solid #333;
+     &:last-child{
+        border:none;
+    }
+
+    input-row
+    {
+        width:100%;
+        min-width:$unit*2;
+        @include flex(row,wrap);
+    }
+}
+
+input-group,
+input-set{
+    padding:0 $spacing $spacing 0;
+}
+
+input-group
+{
+    @include flex-item(1,0,auto);
+    @include flex(row,wrap);
+
+    &>input-set{
+        padding:0;
+    }
+}
+
+input-set
+{
+    //flex-item
+    @include flex-item(1,0,auto);
+    min-height: $unit*2;
+    padding:0 $spacing;
+
+    &.xs{
+        flex-basis:12.5%;
+    }
+    &.s{
+        flex-basis: 25%;
+    }
+    &.m{
+        flex-basis: 50%;
+    }
+    &.l{
+        flex-basis: 75%;
+    }
+    &.xl{
+        flex-basis: 87.5%;
+    }
+
+    label{
+        display:block;
+        line-height:$unit;
+        width:100%;
+    }
+
+    input,
+    select,
+    textarea
+    {
+            width:100%;
+            border-radius:0;
+    }
+}
