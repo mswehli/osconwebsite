@@ -12,6 +12,9 @@ $breakpoint_tablet_s: 600px;
 $breakpoint_tablet_l: 800px;
 $breakpoint_screen_s: 1024px;
 $breakpoint_screen_m: 1280px;
+$breakpoint_screen_xm: 1366px;
+$breakpoint_screen_l: 1600px;
+$breakpoint_screen_xl: 1920px;
 
 
 /* colours */
@@ -34,18 +37,18 @@ $color_text_inverse:#f1f1f1;
 
 
 /* Fonts */
-$font_base: 'Lato', sans-serif;
-$font_header: 'Roboto Condensed', sans-serif;
+$font_base:  aktiv-grotesk;
+$font_header: nimbus-sans;
 
 /* font-sizes */
 $fontsize_h1: 2.2rem;
-$fontsize_h2: 2rem;
+$fontsize_h2: 4.75rem;
 $fontsize_h3: 1.5rem;
 $fontsize_h4: 1.3rem;
 $fontsize_h5: 1.2rem;
 $fontsize_h6: 1rem;
 
-$fontsize: 1rem;
+$fontsize: 3.5rem;
 
 $fontsize_xl: 1.4rem;
 $fontsize_l: 1.2rem;
