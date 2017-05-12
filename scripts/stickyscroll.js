@@ -23,8 +23,7 @@ var Moodieio = Moodieio || {};
         obj.addEventListener(type, func);
     };
 
-    /* init - you can init any event */
-    throttle("scroll", "optimizedScroll");
+    Moodieio.throttle = throttle;
 })();
 
 //script for stick scroll elements
@@ -33,14 +32,17 @@ var Moodieio = Moodieio || {};
     function stickyCreate(elem, options)
     {
         console.log("creating new stick scroll");
+        //container that will become sticky based on its location
         this.el_container = elem;
-        this.el_body = document.getElementsByTagName("body")[0];
+        //body that will actually scroll
+        this.el_body = document.getElementById("ol-main-container");
         this.isSticky = false;
         this.className = "isSticky";
 
         //add scroll event
         var that = this;
-        window.addEventListener("optimizedScroll", this.update.bind(that));  
+        Moodieio.throttle("scroll","mainOptimizedScroll",this.el_body);
+        this.el_body.addEventListener("mainOptimizedScroll", this.update.bind(that));  
 
     }
     stickyCreate.prototype.update = function()
@@ -83,6 +85,7 @@ var Moodieio = Moodieio || {};
 
     var onLoad = function(){
         //foreach slider init a slider
+        console.log("loaded");
         var els_allStickyscroll = document.querySelectorAll("[data-moodieio-stickyscroll]");
 
         for (var i=0, len = els_allStickyscroll.length; i<len; i++){

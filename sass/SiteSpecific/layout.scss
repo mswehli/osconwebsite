@@ -18,16 +18,25 @@ h2{
     
   }
 
-// .isSticky{
-//     position: fixed !important;
-//     top: 0;
-// }
-
 #ol-main-container{
     width:100%;
     height:100%;
-    
-    // overflow-y:scroll;
+    overflow-y:scroll;
+}
+
+.ol-section-outercontainer{
+    width:100%;
+    height:100%;
+    min-height: 45vw;
+
+    &.isSticky{
+        &>.ol-section{
+            position:absolute;
+            top:0;
+            left:0;
+            pointer-events: none;
+        }
+    }
 }
 .ol-section{
     width:100%;
@@ -38,9 +47,9 @@ h2{
     background-position: center;
 
     overflow:hidden;
-    position: absolute;
+    position:relative;
 
-    &:nth-child(1){
+    &:nth-child(1) > {
         background-image:url('/Media/Images/homebg.jpeg');
         z-index:20;
     }
