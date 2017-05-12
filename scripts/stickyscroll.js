@@ -47,6 +47,7 @@ var Moodieio = Moodieio || {};
     {
         console.log("called scroll update");
         var bRect = this.el_container.getBoundingClientRect();
+        console.log(bRect.top);
         if(this.isSticky)
         {
             //remove class
@@ -57,6 +58,7 @@ var Moodieio = Moodieio || {};
                     .replace(this.className,'')
                     .replace(/\s+/g, " ");
                 this.isSticky = false;
+                console.log("class removed");
             }
         } 
         else 
@@ -67,6 +69,7 @@ var Moodieio = Moodieio || {};
                 //add isSticky class
                 this.el_container.className += " " + this.className;
                 this.isSticky = true;
+                console.log("class added");
             }
         }
     }

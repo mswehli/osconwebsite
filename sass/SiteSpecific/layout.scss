@@ -18,7 +18,10 @@ h2{
     
   }
 
-
+// .isSticky{
+//     position: fixed !important;
+//     top: 0;
+// }
 
 #ol-main-container{
     width:100%;
@@ -29,12 +32,13 @@ h2{
 .ol-section{
     width:100%;
     height:100%;
+    min-height: 45vw;
 
     background-size:cover;
     background-position: center;
 
     overflow:hidden;
-    position: relative;
+    position: absolute;
 
     &:nth-child(1){
         background-image:url('/Media/Images/homebg.jpeg');
@@ -66,6 +70,8 @@ h2{
     left:0;
     pointer-events: none;
     // z-index:100;
+    
+
 }
 
 .ol-section-menu-container
