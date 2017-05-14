@@ -28,6 +28,50 @@ h2{
     width:100%;
     height:100%;
     min-height: 45vw;
+    background-size:cover;
+    background-position: center;
+    overflow-y:scroll;
+
+
+    &:nth-child(1){
+        >section{
+            background-image:url('/Media/Images/homebg.jpeg');
+            z-index:20;
+
+        }
+    }
+    
+    &:nth-child(2){
+        >section{
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            z-index:25;
+           
+            & .ol-section-logo-container{
+                    background-color:orange;
+            }
+            
+        }
+    }
+   
+    &:nth-child(3){
+        >section{
+            background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+            z-index:30;
+            & .ol-section-logo-container{
+                background-color:mediumspringgreen;
+            }
+        }
+    }
+    
+    &:nth-child(4){
+        >section{
+            z-index:35;
+            & .ol-section-logo-container{
+                background-color:cornflowerblue;
+            }
+        }
+    }
+
 
     &.isSticky{
         &>.ol-section{
@@ -37,6 +81,10 @@ h2{
             pointer-events: none;
         }
     }
+ 
+    
+
+
 }
 .ol-section{
     width:100%;
@@ -49,25 +97,7 @@ h2{
     overflow:hidden;
     position:relative;
 
-    &:nth-child(1) > {
-        background-image:url('/Media/Images/homebg.jpeg');
-        z-index:20;
-    }
-    &:nth-child(2){
-        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-        z-index:25;
 
-        & .ol-section-logo-container{
-            background-color:orange;
-        }
-    }
-    &:nth-child(3){
-        background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-        z-index:30;
-        & .ol-section-logo-container{
-            background-color:grey;
-        }
-    }
 }
 
 .ol-section-hud
@@ -117,7 +147,7 @@ h2{
         width:1px;
         height:100%;
         vertical-align: middle;
-        background-color:red;
+        // background-color:red;
         content:"";
 
     }
@@ -171,10 +201,8 @@ h2{
 #ol-section-title-innercontainer{
    
     width: 98%;
-    //display: inline-block;
     vertical-align: middle;
     height: auto;
-    border: solid 2px cyan;
     text-align: center;
     display: inline-block;
     
@@ -183,11 +211,9 @@ h2{
 
 #ol-section-title-text-container{
 
-        border: solid 2px red;
         width: auto;
         height: auto;
-        // margin: 0 auto;
-         display: inline-block;
+        display: inline-block;
         
         >h2{
 
@@ -728,8 +754,8 @@ $fontsize: 1.3rem;
 /* small tablet only */
 @media (min-width: $breakpoint_mobile) and (max-width: $breakpoint_tablet_s){
 
-h2{font-size:1.5rem; }
-$fontsize: 1.1rem;
+h2{font-size:1.9rem; }
+$fontsize: 1.4rem;
 
 section:nth-of-type(2){
     height: 600px;
@@ -742,6 +768,8 @@ section:nth-of-type(4){
 }
 
 #ol-section-title-text-container{
+
+    >h2{font-size: 1.2rem;}
 
     #ol-title-span{
 
@@ -842,8 +870,8 @@ section:nth-of-type(4){
 @media (max-width: $breakpoint_mobile )
 {
 
-h2{font-size:1.2rem; }
-$fontsize: 1rem;
+h2{font-size:1.8rem; }
+$fontsize: 1.2rem;
 
 section:nth-of-type(2){
     height: 600px;
@@ -871,6 +899,8 @@ section:nth-of-type(4){
 }
 
 #ol-section-title-text-container{
+
+    >h2{font-size: 1.2rem;}
 
     #ol-title-span{
 
