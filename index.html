@@ -8,6 +8,10 @@
        <title>Oscon Ltd</title>
        <link rel="stylesheet" href="CSS/main.css">
        <script src="scripts/stickyscroll.js" async></script>
+       <script src="scripts/expand.js" async></script>
+       <script src="scripts/animate_title.js" async></script>
+       <script src="scripts/TimelineMax.min.js" async></script>
+       <script src="scripts/TweenMax.min.js" async></script>
    </head>
    <body>
        <main id="ol-main-container">
@@ -42,7 +46,13 @@
            <div class="ol-section-outercontainer"  data-moodieio-stickyscroll>
                 <section class="ol-section">
                     <div class="ol-section-hud" >
-                            <div class="ol-section-menu-container">=</div>
+                            <div class="ol-section-menu-container">
+                                <div id="ol-section-menu-burger-container" onclick="Moodieio.Expand('ol-section-menu-container')">
+                                    <div><span></span></div>
+                                    <div><span></span><span></span></div>
+                                    <div><span></span></div>
+                                </div>
+                            </div>
                             <div class="ol-section-logo-container">2</div>
                             <div class="ol-section-location-container">
                                 <div class="ol-section-location-innercontainer">
@@ -135,6 +145,6 @@
            </div>
        </main>
    </body>
-<script src="https://use.typekit.net/sfk1uuz.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!--<script src="https://use.typekit.net/sfk1uuz.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>-->
 </html>

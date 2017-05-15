@@ -12,9 +12,9 @@
 */
 
 /*Name of main menu container which will have class name changed*/
-$menu_container: lu-header-innercontainer;
+$menu_container:ol-section-menu-container;
 /*Name of burger container where icons will reside and be animated*/
-$burger-icon-container: lu-burger-container;
+$burger-icon-container: ol-section-menu-burger-container;
 
 
 ##{$burger-icon-container} {
