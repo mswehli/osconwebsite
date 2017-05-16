@@ -23,8 +23,8 @@
                 console.log("Tweening "+counter);
                 var tl2= new TimelineLite();      
                        
-                tl2.staggerFromTo(".spany", 0.1, {opacity:0, y:-100},{opacity:1, y:100}, 0.1)
-                   .staggerFromTo(".spany", 0.1, {opacity:1, y:100},{opacity:0, y:-100}, -0.1,'+=2');
+                tl2.staggerFromTo(".spany",0.05, {opacity:0, y:-100},{opacity:1, y:100}, 0.1)
+                   .staggerFromTo(".spany", 0.05, {opacity:1, y:100},{opacity:0, y:-100}, -0.1,'+=2');
                 
                 counter++;   
             
