@@ -589,7 +589,7 @@
     
         var app = document.getElementById('ol-title-span');
         var typewriter = new Typewriter(app, {
-            loop: true
+            loop: true, typingSpeed:70,deleteSpeed:70,animateCursor:false,cursor:""
         });
 
         typewriter.typeString('Work')
@@ -602,7 +602,7 @@
             .pauseFor(3000)
             .deleteAll()
             .typeString('Enjoy')
-            .pauseFor(2500)
+            .pauseFor(3000)
             .deleteAll()
             .start();
 });     

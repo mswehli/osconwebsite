@@ -8,6 +8,8 @@
        <title>Oscon Ltd</title>
        <link rel="stylesheet" href="CSS/main.css">
        <script src="scripts/TypeWriter.js"  async></script>
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbQI-aXMxu1kHlhDvsS1mBsVAdXqYdt70&"></script>
+       <script src="scripts/map.js" async></script>
        <script src="scripts/stickyscroll.js" async></script>
        <script src="scripts/expand.js" async></script>
        <script src="scripts/TimelineMax.min.js" async></script>
@@ -133,19 +135,23 @@
                                 <div id="ol-section-contact-left-container">
                                     <div id="ol-section-contact-left-innercontaier">
                                         <h2>CONTACT</h2>
-                                        <div class="ol-section-contact-info-row">+35621670278</div>
-                                        <div class="ol-section-contact-info-row">info@oscon.com.mt</div>
+                                        <div class="ol-section-contact-info-row"><a href="tel:+35621670278">+35621670278</a></div>
+                                        <div class="ol-section-contact-info-row"><a href="mailto:info@mafaza.com">info@oscon.com.mt</a></div>
                                         <div class="ol-section-contact-info-row">14/15 Timber Wharf</div>
                                         <div class="ol-section-contact-info-row">Marsa MRS1443</div>
                                         <div class="ol-section-contact-info-row">Malta</div>
                                     </div>
                                 </div>
-                                <div id="ol-section-contact-right-container"></div>
+                                <div id="ol-section-contact-right-container" data-map-img></div>
+                                <div id="ol-map-container" data-map-container >
+                                    <div id="ol-map-close" data-map-close >X</div>
+                                    <div id="ol-map"  data-map data-map-lat="32.8110821" data-map-lng="13.1870945"></div>
+                                </div>
                         </div>
                 </section>
            </div>
        </main>
    </body>
-<script src="https://use.typekit.net/sfk1uuz.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<!--<script src="https://use.typekit.net/sfk1uuz.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>-->
 </html>
