@@ -17,7 +17,7 @@ $menu_container:ol-section-menu-container;
 $burger-icon-container: ol-section-menu-burger-container;
 
 
-##{$burger-icon-container} {
+.#{$burger-icon-container} {
     width:32px;
     height:22px;
     font-size:0;
@@ -56,27 +56,27 @@ $burger-icon-container: ol-section-menu-burger-container;
   }
 }
 
-##{$menu_container}.expanded
+.#{$menu_container}.expanded
 {
-    ##{$burger-icon-container} > div > span{
+    .#{$burger-icon-container} > div > span{
        background-color:$color_accent_dark;
     }
-    ##{$burger-icon-container} > div:first-child > span:first-child{
+    .#{$burger-icon-container} > div:first-child > span:first-child{
         transform:translate(0px, 9px) rotate(135deg);
     }
 
 
-    ##{$burger-icon-container} > div:nth-child(3) > span:first-child{
+    .#{$burger-icon-container} > div:nth-child(3) > span:first-child{
         transform:translate(0px, -9px) rotate(-135deg);
 
     }
 
 
-    ##{$burger-icon-container} > div:nth-child(2) > span:first-child{
+    .#{$burger-icon-container} > div:nth-child(2) > span:first-child{
         transform:translate(-20px, 0);
         opacity:0;
     }
-    ##{$burger-icon-container} > div:nth-child(2) > span:nth-child(2){
+    .#{$burger-icon-container} > div:nth-child(2) > span:nth-child(2){
         transform:translate(20px, 0);
         opacity:0;
     }

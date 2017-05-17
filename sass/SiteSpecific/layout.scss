@@ -8,20 +8,27 @@ html,body
     height:100%;
     background-color:$color_bg;
     color:$color_text;
-    font-size: 1rem; 
+    font-size: 1rem;
+
 }
 
 h2{
     font-size: $fontsize_h2;
     font-family: $font_header;
     font-weight: bold;
+
     
   }
+
+  ::-webkit-scrollbar {
+    // width: 0;
+}
 
 #ol-main-container{
     width:100%;
     height:100%;
-    overflow-y:scroll;
+    overflow-y: auto;
+
 }
 
 .ol-section-outercontainer{
@@ -37,6 +44,9 @@ h2{
             background-image:url('/Media/Images/homebg.jpeg');
             z-index:20;
 
+            .ol-section-menu-innercontainer{
+                background-color: lightblue;
+            }
         }
     }
     
@@ -48,6 +58,10 @@ h2{
            
             & .ol-section-logo-container{
                     background-color:orange;
+            }
+
+             .ol-section-menu-innercontainer{
+                background-color: lightseagreen;
             }
             
         }
@@ -61,6 +75,10 @@ h2{
             & .ol-section-logo-container{
                 background-color:mediumspringgreen;
             }
+
+            .ol-section-menu-innercontainer{
+                background-color: lightsalmon;
+            }
         }
     }
     
@@ -71,13 +89,17 @@ h2{
             & .ol-section-logo-container{
                 background-color:cornflowerblue;
             }
+
+            .ol-section-menu-innercontainer{
+                background-color: lightslategray;
+            }
         }
     }
 
 
     &.isSticky{
         &>.ol-section{
-            position:absolute;
+            position:fixed;
             top:0;
             left:0;
             pointer-events:none ;
@@ -96,7 +118,7 @@ h2{
     background-size:cover;
     background-position: center;
 
-    overflow:hidden;
+    // overflow: hidden;
     position:relative;
 
 
@@ -117,10 +139,48 @@ h2{
 .ol-section-menu-container
 {
     position:absolute;
-    left:$unit;
-    top:$unit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
     z-index:120;
+
+
+}
+
+.expanded{
+    .ol-section-menu-innercontainer{
+        left:0;
+        @include transition(left 0.5s ease-in-out 0s);
+    }
+}
+
+.ol-section-menu-innercontainer{
+
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: -40%;
+
+    @include transition(left 0.5s ease-in-out 0s);
+
+}
+
+.menu-wrapper{
+    position: fixed;
+    width: 100%;
+    visibility: hidden;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+.ol-section-menu-burger-container{
+    
+    position: absolute;
+    top: $unit;
+    left: $unit;
 }
 .ol-section-logo-container
 {
@@ -918,15 +978,15 @@ section:nth-of-type(4){
 h2{font-size:1.8rem; }
 $fontsize: 1.2rem;
 
-section:nth-of-type(2){
-    height: 600px;
-}
-section:nth-of-type(3){
-    height: 700px;
-}
-section:nth-of-type(4){
-    height: 700px;
-}
+// section:nth-of-type(2){
+//     height: 600px;
+// }
+// section:nth-of-type(3){
+//     height: 700px;
+// }
+// section:nth-of-type(4){
+//     height: 700px;
+// }
 
 .ol-section-location-container{
     right: 10px;
@@ -941,6 +1001,12 @@ section:nth-of-type(4){
     }
 
 
+}
+
+.ol-section-menu-innercontainer{
+
+        width: 100%;
+        left: -100%;
 }
 
 #ol-section-title-text-container{
