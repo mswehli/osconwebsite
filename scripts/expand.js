@@ -1,30 +1,26 @@
 var Moodieio = Moodieio || {};
 
-Moodieio.Expand = function(eId,eNum)
+Moodieio.Expand = function(eId)
 {
     console.log("expanding: " + eId);
     //google analytics event if available
    if(typeof(ga)!== 'undefined' && ga!==null){
        ga('send','event','Site','menu-expand');
    }
-    var el = document.getElementsByClassName(eId);
+    var el = document.getElementById(eId);
 
-    if(eNum == undefined){
+    Expand_apply(el);
 
-        for(i=0;i<el.length;i++){ Expand_apply(i); }
-        
-    }else{ Expand_apply(eNum); }
+    function Expand_apply (el){
 
-    function Expand_apply (x){
-
-         if(el[x]!==null){
-                if(el[x].className.indexOf('expanded')!==-1)
+         if(el!==null){
+                if(el.className.indexOf('expanded')!==-1)
                 {
-                    el[x].className = el[x].className.replace(' expanded','');
+                    el.className = el.className.replace(' expanded','');
                 } else {
-                    el[x].className = el[x].className + " expanded"
+                    el.className = el.className + " expanded"
                 }
-                console.dir(el[x]);
+                console.dir(el);
             }
     }
 
