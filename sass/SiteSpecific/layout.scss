@@ -24,8 +24,6 @@ h2{
 #ol-main-container{
     width:100%;
     height:100%;
-    overflow-y: auto;
-
 }
 
 .ol-section-outercontainer{
@@ -102,10 +100,6 @@ h2{
             pointer-events:none ;
         }
     }
- 
-    
-
-
 }
 .ol-section{
     width:100%;
@@ -118,18 +112,6 @@ h2{
     // overflow: hidden;
     position:relative;
 
-
-}
-
-.ol-section-hud
-{
-    position:absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    // z-index:100;
-    
 
 }
 
@@ -286,7 +268,7 @@ h2{
             font-weight: bold;
             padding: 10px;
             line-height: 91px;
-
+            text-transform: uppercase;
             .spany{
                 opacity: 0;
             }

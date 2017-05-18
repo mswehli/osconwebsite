@@ -35,7 +35,7 @@ var Moodieio = Moodieio || {};
         //container that will become sticky based on its location
         this.el_container = elem;
         //body that will actually scroll
-        this.el_body = document.getElementById("ol-main-container");
+        this.el_body = window;
         this.isSticky = false;
         this.className = "isSticky";
 
