@@ -1,4 +1,3 @@
-
 (function(){
 
         var mapContainer = document.querySelectorAll("[data-map-container]");
