@@ -404,7 +404,8 @@ h2{
     position: absolute;
     right: 0;
     min-width: 570px;
-    min-height: 331px;
+    // min-height: 331px;
+    height: auto;
     margin: 0;
     padding-right: 110px;
     margin-top: 150px;
@@ -429,9 +430,8 @@ h2{
         text-decoration: none;
     }
 }
-.ol-section-contact-info-row:hover{
-    color:white;
-}
+
+#ol-section-contact-left-innercontaier:hover{ >div{color:white;} }
 
 
 #ol-section-contact-right-container{

@@ -47,7 +47,7 @@ var Moodieio = Moodieio || {};
     }
     stickyCreate.prototype.update = function()
     {
-        console.log("called scroll update");
+        // console.log("called scroll update");
         var bRect = this.el_container.getBoundingClientRect();
         
         if(this.isSticky)
