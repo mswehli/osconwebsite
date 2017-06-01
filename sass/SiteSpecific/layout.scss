@@ -5,6 +5,7 @@
 html,body
 {
     width:100%;
+    min-width:320px;
     height:100%;
     background-color:$color_bg;
     color:$color_text;
@@ -12,6 +13,10 @@ html,body
 
 }
 
+a{
+    text-decoration: none;
+    color:inherit;
+}
 h2{
     font-size: $fontsize_h2;
     font-family: $font_header;
@@ -39,7 +44,8 @@ h2{
             width:320px;
         }
         #ol-menu-burger-container{
-            padding:10px 0 0 10px;
+            top:20px;
+            right:20px;
         }
 
 
@@ -56,14 +62,39 @@ h2{
     background-color:#ffffff;
 
     @include transition(width 0.5s ease-in-out 0s);
+
+    &>nav {
+        padding-top:100px;
+        width:320px;
+        &>a{
+            display:block;
+            width:100%;
+            padding-left:30px;
+            
+            color:#212121;
+            font-size:1.4rem;
+            font-family:$font_base;
+            font-weight: 200;
+
+            line-height: 2rem;
+            
+            text-align:middle;
+            
+            
+            cursor:pointer;
+        }
+    }
 }
 #ol-menu-burger-container{
     display:inline-block;
-    width:80px;
+    width:32px;
+    position:absolute;
+    right:-72px;
+    top:40px;
     vertical-align:top;
-    padding:30px 0 0 30px;
+    padding:0px 0 0 0px;
 
-    @include transition(padding 0.5s ease-in-out 0s);
+    @include transition(padding 0.5s ease-in-out 0s, right 0.5s ease-in-out 0s, top 0.5s ease-in-out 0s);
 }
 
 #ol-logo{
@@ -83,7 +114,7 @@ h2{
     &:nth-child(1){
         
         >section{
-            background-image:url('/Media/Images/homebg.jpeg');
+            background-image:url('/Media/Images/homebg.jpg');
             z-index:20;
 
         }
@@ -341,8 +372,9 @@ h2{
 #ol-section-about-left{
 
     vertical-align: top;
-    padding-top:30px; 
-    
+    padding:30px 0 0 70px;
+    text-align: justify;
+    direction:rtl;
 
     >h2{
  
@@ -352,8 +384,7 @@ h2{
         }
     >p{
         font-size: $fontsize;
-        text-align: justify; 
-        direction: rtl;
+        text-align:right;
         color: #9a9898;
         font-family: $font_base;
         font-weight: bold;
@@ -410,6 +441,8 @@ h2{
     margin: 0;
     padding-right: 110px;
     margin-top: 150px;
+
+    color: #9a9898;
     text-align: right;
 
     >h2{
@@ -419,21 +452,24 @@ h2{
     }
 }
 
-.ol-section-contact-info-row{
+.ol-section-contact-group{
+    display:block;
+    padding:0;
+
     font-size:$fontsize;
     font-family: $font_base;
     font-weight: bold;
-    color: #9a9898;
-    padding-bottom: 10px;
-    cursor:pointer;
-    >a{
-        color:inherit;
-        text-decoration: none;
+
+    &:hover{
+        color:$color_text_inverse;
     }
 }
 
-#ol-section-contact-left-innercontaier:hover{ >div{color:white;} }
-
+.ol-section-contact-info-row{
+    
+    padding-bottom: 10px;
+    cursor:pointer;
+}
 
 #ol-section-contact-right-container{
 
@@ -480,6 +516,8 @@ h2{
     margin-top: 150px;
     text-align: right;
 
+    color:#9a9898;
+
     >h2{
  
         padding-bottom: 60px;
@@ -495,13 +533,10 @@ h2{
             font-family:$font_base;
             font-weight: bold;
             padding-bottom: 15px;
-            
-        }
-        >li:nth-of-type(odd){
-            color: #f7f7f7;
-        }
-        >li:nth-of-type(even){
-            color:#9a9898;
+
+            &:hover{
+                color:$color_text_inverse;
+            }
         }
 
      }
@@ -567,7 +602,7 @@ $fontsize: 2.75rem;
     >h2{ padding-bottom: 45px; }
 }
 
-.ol-section-contact-info-row{font-size: $fontsize;}
+.ol-section-contact-group{font-size: $fontsize;}
 
 #ol-section-projects-container{
 
@@ -641,7 +676,7 @@ $fontsize: 2.4rem;
     >h2{ padding-bottom: 45px; }
 }
 
-.ol-section-contact-info-row{font-size: $fontsize;}
+.ol-section-contact-group{font-size: $fontsize;}
 
 #ol-section-projects-container{
 
@@ -731,7 +766,7 @@ $fontsize: 1.75rem;
     >h2{ padding-bottom: 30px; ; }
 }
 
-.ol-section-contact-info-row{font-size: $fontsize;}
+.ol-section-contact-group{font-size: $fontsize;}
 
 #ol-section-projects-container{
 
@@ -811,7 +846,7 @@ $fontsize: 1.3rem;
     >h2{ padding-bottom: 30px; }
 }
 
-.ol-section-contact-info-row{font-size: $fontsize;}
+.ol-section-contact-group{font-size: $fontsize;}
 
 #ol-section-projects-container{
 
@@ -927,7 +962,7 @@ section:nth-of-type(4){
     >h2{ padding-bottom: 30px; width: 100%; }
 }
 
-.ol-section-contact-info-row{font-size: $fontsize;}
+.ol-section-contact-group{font-size: $fontsize;}
 
 #ol-section-projects-container{
 
@@ -958,15 +993,10 @@ section:nth-of-type(4){
 h2{font-size:1.8rem; }
 $fontsize: 1.2rem;
 
-// section:nth-of-type(2){
-//     height: 600px;
-// }
-// section:nth-of-type(3){
-//     height: 700px;
-// }
-// section:nth-of-type(4){
-//     height: 700px;
-// }
+#ol-logo{
+    height:60px;
+    width:auto;
+}
 
 .ol-section-location-container{
     right: 10px;
@@ -1064,7 +1094,7 @@ $fontsize: 1.2rem;
     >h2{ padding-bottom: 30px; width: 100%; }
 }
 
-.ol-section-contact-info-row{font-size: $fontsize;}
+.ol-section-contact-group{font-size: $fontsize;}
 
 #ol-section-projects-container{
 

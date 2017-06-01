@@ -50,7 +50,7 @@ $burger-icon-container: ol-menu-burger-icon;
   &:hover{
       div{
           span{
-              background-color:$color_accent_dark;
+              background-color:white;
           }
       }
   }
@@ -59,7 +59,7 @@ $burger-icon-container: ol-menu-burger-icon;
 ##{$menu_container}.expanded
 {
     ##{$burger-icon-container} > div > span{
-       background-color:$color_accent_dark;
+       background-color:#212121;
     }
     ##{$burger-icon-container} > div:first-child > span:first-child{
         transform:translate(0px, 9px) rotate(135deg);

@@ -54,7 +54,7 @@ var Moodieio = Moodieio || {};
 
                     if (timeout != 1) clearTimeout(timeout);
 
-                    timeout = setTimeout(after_scrolling, 500);
+                    timeout = setTimeout(after_scrolling, 200);
             });
 
             function after_scrolling(){
