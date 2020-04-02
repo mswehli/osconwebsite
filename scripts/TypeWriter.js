@@ -601,7 +601,7 @@
             .typeString('Play')
             .pauseFor(3000)
             .deleteAll()
-            .typeString('Enjoy')
+            .typeString('Relax')
             .pauseFor(3000)
             .deleteAll()
             .start();
